@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimus GPS Tracker - Strategic Analysis & Growth Plan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #333;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .presentation-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .slide {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            margin: 40px 0;
+            padding: 50px;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: slideIn 1s ease-out forwards;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, #1e3c72, #2a5298, #667eea);
+        }
+
+        @keyframes slideIn {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .slide:nth-child(even) {
+            animation-delay: 0.3s;
+        }
+
+        .slide:nth-child(odd) {
+            animation-delay: 0.1s;
+        }
+
+        h1 {
+            color: #1e3c72;
+            font-size: 3em;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #1e3c72;
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 600;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #2d3748;
+            font-size: 1.5em;
+            margin: 20px 0 15px 0;
+            font-weight: 600;
+        }
+
+        h4 {
+            color: #4a5568;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .executive-summary {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            border-left: 6px solid #1e3c72;
+        }
+
+        .key-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .metric {
+            text-align: center;
+            padding: 25px;
+            background: linear-gradient(135deg, #f7fafc, #edf2f7);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .metric:hover {
+            transform: translateY(-8px);
+        }
+
+        .metric-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #1e3c72;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .metric-label {
+            font-size: 1em;
+            color: #4a5568;
+            font-weight: 500;
+        }
+
+        .growth-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .growth-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .growth-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #1e3c72, #667eea);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .growth-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .growth-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(30, 60, 114, 0.15);
+            border-color: #1e3c72;
+        }
+
+        .priority-badge {
+            display: inline-block;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .high-priority {
+            background: linear-gradient(135deg, #e53e3e, #c53030);
+        }
+
+        .medium-priority {
+            background: linear-gradient(135deg, #dd6b20, #c05621);
+        }
+
+        .strategic-priority {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+        }
+
+        .expansion-priority {
+            background: linear-gradient(135deg, #38a169, #2f855a);
+        }
+
+        .market-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transform: scale(1);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(30, 60, 114, 0.2);
+        }
+
+        .stat-box:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 15px 35px rgba(30, 60, 114, 0.3);
+        }
+
+        .stat-number {
+            font-size: 2.8em;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1em;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        .competitive-advantage {
+            background: linear-gradient(135deg, #38a169, #2f855a);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            box-shadow: 0 10px 25px rgba(56, 161, 105, 0.2);
+        }
+
+        .competitive-advantage h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.6em;
+        }
+
+        .roadmap-timeline {
+            position: relative;
+            margin: 40px 0;
+            padding-left: 30px;
+        }
+
+        .roadmap-timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, #1e3c72, #2a5298, #667eea);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            position: relative;
+            margin-left: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+            border-color: #1e3c72;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -46px;
+            top: 35px;
+            width: 25px;
+            height: 25px;
+            background: #1e3c72;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 0 0 3px #1e3c72;
+        }
+
+        .swot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .swot-card {
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .strengths {
+            background: linear-gradient(135deg, #e6fffa, #b2f5ea);
+            border-left: 6px solid #38a169;
+        }
+
+        .weaknesses {
+            background: linear-gradient(135deg, #fed7d7, #fbb6ce);
+            border-left: 6px solid #e53e3e;
+        }
+
+        .opportunities {
+            background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+            border-left: 6px solid #3182ce;
+        }
+
+        .threats {
+            background: linear-gradient(135deg, #fef5e7, #fed7aa);
+            border-left: 6px solid #dd6b20;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fef5e7, #fed7aa);
+            border-left: 6px solid #dd6b20;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #1a202c, #2d3748);
+            color: white;
+            text-align: center;
+            padding: 50px;
+            border-radius: 20px;
+            margin: 50px 0;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 25px;
+            border-bottom: none;
+        }
+
+        .financial-summary {
+            background: linear-gradient(135deg, #f0fff4, #c6f6d5);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            border-left: 6px solid #38a169;
+        }
+
+        .risk-matrix {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .risk-item {
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid;
+        }
+
+        .risk-high {
+            background: #fed7d7;
+            border-color: #e53e3e;
+        }
+
+        .risk-medium {
+            background: #fef5e7;
+            border-color: #dd6b20;
+        }
+
+        .risk-low {
+            background: #e6fffa;
+            border-color: #38a169;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            line-height: 1.6;
+            color: #4a5568;
+        }
+
+        li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: #1e3c72;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        .competitive-advantage li::before {
+            color: white;
+        }
+
+        .section-divider {
+            height: 4px;
+            background: linear-gradient(90deg, #1e3c72, #667eea, #2a5298);
+            border-radius: 2px;
+            margin: 50px 0;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255,255,255,0.95);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar a {
+            display: block;
+            color: #1e3c72;
+            text-decoration: none;
+            padding: 8px 15px;
+            margin: 5px 0;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+            font-weight: 500;
+        }
+
+        .navbar a:hover {
+            background: #1e3c72;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .presentation-container {
+                padding: 10px;
+            }
+            
+            .slide {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 2.2em;
+            }
+            
+            h2 {
+                font-size: 1.8em;
+            }
+            
+            .growth-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .navbar {
+                display: none;
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="navbar">
+        <a href="#overview">Overview</a>
+        <a href="#market">Market Analysis</a>
+        <a href="#strategy">Growth Strategy</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#financials">Financials</a>
+        <a href="#risk">Risk Analysis</a>
+    </div>
+
+    <div class="presentation-container">
+        
+        <!-- Title Slide -->
+        <div class="slide" id="overview">
+            <h1>🎯 Optimus GPS Tracker</h1>
+            <h2 style="text-align: center; border-bottom: none; justify-content: center;">Strategic Analysis & Growth Plan</h2>
+            
+            <div class="executive-summary">
+                <h3>Executive Summary</h3>
+                <p style="font-size: 1.1em; color: #4a5568; margin-bottom: 20px;">
+                    Comprehensive analysis of Optimus GPS Tracker's market position, competitive landscape, 
+                    and strategic growth opportunities in the expanding $97.6B GPS tracking industry.
+                </p>
+            </div>
+
+            <div class="key-metrics">
+                <div class="metric">
+                    <span class="metric-value">$14M</span>
+                    <div class="metric-label">Current Annual Revenue</div>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">95%</span>
+                    <div class="metric-label">Customer Retention Rate</div>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">80%</span>
+                    <div class="metric-label">Recurring Revenue</div>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">$1.06M</span>
+                    <div class="metric-label">Monthly Recurring Revenue</div>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">$5.3M</span>
+                    <div class="metric-label">Current EBITDA</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Market Opportunity & Industry Overview -->
+        <div class="slide" id="market">
+            <h2><span class="icon">📈</span>Market Opportunity & Industry Analysis</h2>
+            
+            <div class="market-stats">
+                <div class="stat-box">
+                    <span class="stat-number">$97.6B</span>
+                    <div class="stat-label">Global Fleet Management Market by 2034</div>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">16%</span>
+                    <div class="stat-label">Annual Growth Rate (CAGR)</div>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">$1.12B</span>
+                    <div class="stat-label">North American GPS Tracking Market</div>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">$56M</span>
+                    <div class="stat-label">Target Addressable Market (SOM)</div>
+                </div>
+            </div>
+            
+            <div class="competitive-advantage">
+                <h3>🎯 Our Competitive Positioning</h3>
+                <ul>
+                    <li><strong>Market Gap:</strong> Serving underserved SMB and independent operator segment</li>
+                    <li><strong>Affordability:</strong> Competitive mid-tier pricing without long-term contracts</li>
+                    <li><strong>Simplicity:</strong> Plug-and-play solution designed for non-technical users</li>
+                    <li><strong>Flexibility:</strong> No long-term commitments unlike enterprise competitors</li>
+                    <li><strong>Scalability:</strong> Cloud-based infrastructure ready for rapid expansion</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Key Market Drivers</h3>
+                <ul>
+                    <li><strong>E-commerce Expansion:</strong> Growing demand for last-mile delivery tracking</li>
+                    <li><strong>Regulatory Compliance:</strong> ELD mandates and Hours of Service requirements</li>
+                    <li><strong>Fuel Cost Monitoring:</strong> Rising fuel costs driving efficiency needs</li>
+                    <li><strong>Driver Safety:</strong> Insurance requirements and liability reduction</li>
+                    <li><strong>Gig Economy Growth:</strong> Independent contractors needing affordable tracking</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Competitive Analysis -->
+        <div class="slide">
+            <h2><span class="icon">🏁</span>Competitive Landscape Analysis</h2>
+            
+            <div class="growth-grid">
+                <div class="growth-card">
+                    <h4>Enterprise Leaders</h4>
+                    <p><strong>Samsara ($1.1B revenue)</strong></p>
+                    <ul>
+                        <li>Strengths: AI tools, enterprise integrations</li>
+                        <li>Weaknesses: Expensive, requires contracts</li>
+                        <li>Target: Large enterprise fleets</li>
+                    </ul>
+                    <br>
+                    <p><strong>Geotab</strong></p>
+                    <ul>
+                        <li>Strengths: Customizable dashboards, API-rich</li>
+                        <li>Weaknesses: Complex setup, reseller model</li>
+                        <li>Target: Mid to large fleets</li>
+                    </ul>
+                </div>
+
+                <div class="growth-card">
+                    <h4>Mid-Market Players</h4>
+                    <p><strong>Verizon Connect</strong></p>
+                    <ul>
+                        <li>Strengths: Nationwide support, broad features</li>
+                        <li>Weaknesses: Long contracts, less SMB-focused</li>
+                    </ul>
+                    <br>
+                    <p><strong>Teletrac Navman</strong></p>
+                    <ul>
+                        <li>Strengths: Compliance-driven, mid-sized tools</li>
+                        <li>Weaknesses: Higher cost, not for solo operators</li>
+                    </ul>
+                </div>
+
+                <div class="growth-card">
+                    <h4>Direct Competitors</h4>
+                    <p><strong>Spytec (~$30M revenue)</strong></p>
+                    <ul>
+                        <li>Device: $7.90, Monthly: $34.95</li>
+                        <li>Target: Small businesses, consumers</li>
+                    </ul>
+                    <br>
+                    <p><strong>Bouncie ($35M revenue)</strong></p>
+                    <ul>
+                        <li>Device: $89.99, Monthly: $9.00</li>
+                        <li>Focus: Family and individual tracking</li>
+                    </ul>
+                </div>
+
+                <div class="growth-card">
+                    <h4>Optimus Competitive Advantage</h4>
+                    <ul>
+                        <li><strong>Sweet Spot Pricing:</strong> $34.95 device, $19.95/month</li>
+                        <li><strong>No Contracts:</strong> Month-to-month flexibility</li>
+                        <li><strong>Target Market:</strong> Underserved SMB segment</li>
+                        <li><strong>Positioning:</strong> "Powerful tracking without bloat or contracts"</li>
+                        <li><strong>Growth Strategy:</strong> Second brand for fleet operators</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SWOT Analysis -->
+        <div class="slide">
+            <h2><span class="icon">⚖️</span>SWOT Analysis</h2>
+            
+            <div class="swot-grid">
+                <div class="swot-card strengths">
+                    <h4>💪 Strengths</h4>
+                    <ul>
+                        <li>Affordable pricing model</li>
+                        <li>Ease of use and setup</li>
+                        <li>Mobile accessibility</li>
+                        <li>Flexible subscription model</li>
+                        <li>95% customer retention rate</li>
+                        <li>Cloud-based scalable infrastructure</li>
+                    </ul>
+                </div>
+
+                <div class="swot-card weaknesses">
+                    <h4>⚠️ Weaknesses</h4>
+                    <ul>
+                        <li>Limited brand recognition</li>
+                        <li>Lack of compliance tools (ELD)</li>
+                        <li>Minimal AI or automation</li>
+                        <li>Small support team</li>
+                        <li>90% Amazon dependency</li>
+                        <li>Limited API integrations</li>
+                    </ul>
+                </div>
+
+                <div class="swot-card opportunities">
+                    <h4>🚀 Opportunities</h4>
+                    <ul>
+                        <li>Expanding SMB fleet market</li>
+                        <li>AI & predictive insights</li>
+                        <li>API & integration potential</li>
+                        <li>Green fleet monitoring</li>
+                        <li>International expansion</li>
+                        <li>Compliance tool development</li>
+                    </ul>
+                </div>
+
+                <div class="swot-card threats">
+                    <h4>⛔ Threats</h4>
+                    <ul>
+                        <li>Heavyweight competitors</li>
+                        <li>Price competition</li>
+                        <li>Regulatory pressure</li>
+                        <li>Customer support expectations</li>
+                        <li>Technology advancement pace</li>
+                        <li>Market consolidation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- Growth Strategy -->
+        <div class="slide" id="strategy">
+            <h2><span class="icon">🚀</span>Strategic Growth Initiatives</h2>
+            
+            <div class="growth-grid">
+                <div class="growth-card">
+                    <div class="priority-badge high-priority">HIGH PRIORITY - YEAR 1</div>
+                    <h4>1. Professional Marketing Investment</h4>
+                    <ul>
+                        <li>Hire dedicated marketing expert (Fernando currently manages in-house)</li>
+                        <li>Launch digital campaigns targeting fleet operators and SMBs</li>
+                        <li>Build social media presence and content marketing strategy</li>
+                        <li>Focus on direct-to-SMB via digital ads and fleet forums</li>
+                        <li><strong>Investment:</strong> $200K annually</li>
+                        <li><strong>Expected ROI:</strong> $2-3M revenue increase</li>
+                    </ul>
+                </div>
+
+                <div class="growth-card">
+                    <div class="priority-badge high-priority">HIGH PRIORITY - YEAR 1</div>
+                    <h4>2. Second Brand Launch</h4>
+                    <ul>
+                        <li>Target large fleet operators with premium hardware/lower monthly fees</li>
+                        <li>Avoid cannibalizing existing customer base</li>
+                        <li>Focus on enterprise sales with dedicated account management</li>
+                        <li>Positioning: "Enterprise-grade without enterprise complexity"</li>
+                        <li><strong>Investment:</strong> $75K initial</li>
+                        <li><strong>Expected ROI:</strong> $2-3M annual revenue</li>
+                    </ul>
+                </div>
+
+                <div class="growth-card">
+                    <div class="priority-badge medium-priority">MEDIUM PRIORITY</div>
+                    <h4>3. Technology Enhancement</h4>
+                    <ul>
+                        <li>Leverage cloud-based software stack for new integrations</li>
+                        <li>Develop API partnerships with fleet management providers</li>
+                        <li>Add compliance tools (ELD support) to compete with enterprise players</li>
+                        <li>Integrate with QuickBooks, Fleetio, and other SMB tools</li>
+                        <li><strong>Investment:</strong> $150K development</li>
+                    </ul>
+                </div>
+
+                <div class="growth-card">
+                    <div class="priority-badge expansion-priority">EXPANSION</div>
+                    <h4>4. Channel Diversification</h4>
+                    <ul>
+                        <li>Reduce 90% Amazon dependency</li>
+                        <li>Expand Walmart presence (currently 3%) and explore new retail partnerships</li>
+                        <li>Develop direct sales capabilities for enterprise customers</li>
+                        <li>Partner with fleet service providers and dealerships</li>
+                        <li><strong>Expected Impact:</strong> 15-20% revenue increase</li>
+                    </ul>
+                </div>
+
+                <div class="growth-card">
+                    <div class="priority-badge high-priority">HIGH PRIORITY</div>
+                    <h4>5. Customer Success & Retention</h4>
+                    <ul>
+                        <li>Build on 95% retention rate to increase lifetime value</li>
+                        <li>Upsell existing customers to premium services</li>
+                        <li>Implement customer success programs to reduce 5% churn further</li>
+                        <li>Add driver scorecards and predictive maintenance features</li>
+                        <li><strong>Goal:</strong> Increase customer LTV by 25%</li>
+                    </ul>
+                </div>
+
+                <div class="growth-card">
+                    <div class="priority-badge strategic-priority">STRATEGIC</div>
+                    <h4>6. Strategic Acquisitions</h4>
+                    <ul>
+                        <li>Use growing cash flow ($5.3M EBITDA) for acquisitions</li>
+                        <li>Target companies with compliance tools or AI capabilities</li>
+                        <li>Acquire smaller competitors for market share consolidation</li>
+                        <li>Focus on customer base and technology synergies</li>
+                        <li><strong>Timeline:</strong> 18-24 months</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Innovation Roadmap -->
+        <div class="slide" id="roadmap">
+            <h2><span class="icon">🛠️</span>Product Innovation Roadmap</h2>
+            
+            <div class="roadmap-timeline">
+                <div class="timeline-item">
+                    <h3>Phase 1: Core Enhancements (0-6 Months)</h3>
+                    <div class="priority-badge high-priority">IMMEDIATE EXECUTION</div>
+                    <ul>
+                        <li><strong>Finalize cloud-enabled dash camera</strong> (80% complete)</li>
+                        <li><strong>Launch stand-alone phone tracking app</strong> (in development)</li>
+                        <li>Improve user experience and mobile app functionality</li>
+                        <li>Enhanced real-time tracking and alert systems</li>
+                        <li>Better reporting tools and historical data analysis</li>
+                    </ul>
+                    <p><strong>Investment Required:</strong> $100K | <strong>Revenue Impact:</strong> $1.5M annually</p>
+                </div>
